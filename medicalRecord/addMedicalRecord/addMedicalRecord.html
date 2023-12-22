@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Boxicons -->
+    <link
+      href="https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <!-- My CSS -->
+    <link rel="stylesheet" href="../../style.css" />
+    <link rel="stylesheet" href="addMedicalRecord.css" />
+
+    <link rel="icon" href="../../assets/img/healthcare.png" />
+
+    <title>REKAM MEDIS | Rekam Medis</title>
+  </head>
+  <body>
+    <!-- SIDEBAR -->
+    <section id="sidebar">
+      <a href="#" class="brand">
+        <img src="../../assets/img/healthcare.png" />
+        <span class="text">REKAM MEDIS</span>
+      </a>
+      <ul class="side-menu top">
+        <li class="">
+          <a href="#" onclick="dashboard()">
+            <i class="bx bxs-dashboard"></i>
+            <span class="text">Dashboard</span>
+          </a>
+        </li>
+        <li>
+          <a
+            href="#"
+            onclick="doctor()"
+            onmouseover="changeImagesDoctor()"
+            onmouseout="defaultImagesDoctor()"
+          >
+            <i class="bx"
+              ><img src="../../assets/img/doctor.png" class="doctor-logo"
+            /></i>
+            <span class="text">Dokter</span>
+          </a>
+        </li>
+        <li>
+          <a
+            href="#"
+            onclick="patient()"
+            onmouseover="changeImagesPatient()"
+            onmouseout="defaultImagesPatient()"
+          >
+            <i class="bx">
+              <img src="../../assets/img/patient.png" class="patient-logo" />
+            </i>
+            <span class="text">Pasien</span>
+          </a>
+        </li>
+        <li>
+          <a
+            href="#"
+            onclick="patientRoom()"
+            onmouseover="changeImagesPatientRoom()"
+            onmouseout="defaultImagesPatientRoom()"
+          >
+            <i class="bx">
+              <img src="../../assets/img/room.png" class="patient-room-logo" />
+            </i>
+            <span class="text">Ruangan</span>
+          </a>
+        </li>
+        <li>
+          <a
+            href="#"
+            onclick="medicine()"
+            onmouseover="changeImagesMedicine()"
+            onmouseout="defaultImagesMedicine()"
+          >
+            <i class="bx">
+              <img src="../../assets/img/medicines.png" class="medicine-logo" />
+            </i>
+            <span class="text">Farmasi</span>
+          </a>
+        </li>
+        <li class="active">
+          <a
+            href="#"
+            onclick="medicalRecord()"
+            onmouseover="changeImagesMedicalRecord()"
+            onmouseout="defaultImagesMedicalRecord()"
+          >
+            <i class="bx">
+              <img
+                src="../../assets/img/medical-records-blue.png"
+                class="medical-record-logo"
+              />
+            </i>
+            <span class="text">Rekam Medis</span>
+          </a>
+        </li>
+      </ul>
+      <ul class="side-menu">
+        <li>
+          <a href="#" onclick="setting()">
+            <i class="bx bxs-cog"></i>
+            <span class="text">Settings</span>
+          </a>
+        </li>
+        <li>
+          <a href="#" class="logout" onclick="logout()">
+            <i class="bx bxs-log-out-circle"></i>
+            <span class="text">Logout</span>
+          </a>
+        </li>
+      </ul>
+    </section>
+    <!-- SIDEBAR -->
+
+    <!-- CONTENT -->
+    <section id="content">
+      <!-- NAVBAR -->
+      <nav>
+        <i class="bx bx-menu"></i>
+        <a href="#" class="nav-link"></a>
+        <a href="#" class="profile">
+          <img src="../../assets/img/user.png" />
+        </a>
+      </nav>
+      <!-- NAVBAR -->
+
+      <!-- Medical Record -->
+      <div class="medical-record" id="medical-record">
+        <div class="head-title">
+          <div class="left">
+            <h1>Rekam Medis</h1>
+            <ul class="breadcrumb">
+              <li>
+                <a href="#">Dashboard</a>
+              </li>
+              <li><i class="bx bx-chevron-right"></i></li>
+              <li>
+                <a href="#">Rekam Medis</a>
+              </li>
+              <li><i class="bx bx-chevron-right"></i></li>
+              <li>
+                <a class="active" href="#">Tambah Rekam Medis</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="table-data">
+          <div class="order">
+            <div class="form-input">
+              <form>
+                <label for="Date">Tanggal Masuk: </label>
+                <input type="date" id="Date" name="Date" required />
+                <label for="name">Nama Pasien: </label>
+                <select id="name" name="name" required>
+                  <option value="">Megawati</option>
+                  <option value="">Soekarno</option>
+                  <option value="">Prabowo Subianto</option>
+                  <option value="">Anies Baswedan</option>
+                  <option value="">Puan Maharani</option>
+                  <option value="">Ganjar Pranowo</option>
+                </select>
+                <label for="diagnosis">Diagnosis: </label>
+                <input type="text" name="diagnosis" id="diagnosis" required />
+                <label for="medicine">Nama Obat: </label>
+                <select name="medicine" id="medicine" required>
+                  <option value="Acarbose">Acarbose</option>
+                  <option value="Amoxicillin">Amoxicillin</option>
+                  <option value="Acetazolamide">Acetazolamide</option>
+                  <option value="Amitriptyline">Amitriptyline</option>
+                  <option value="Aspirin">Aspirin</option>
+                </select>
+                <label for="doctor">Dokter</label>
+                <select name="doctor" id="doctor" required>
+                  <option value="Bill Gates">Bill Gates</option>
+                  <option value="Elon Musk">Elon Musk</option>
+                  <option value="Jim Giovendi">Jim Giovendi</option>
+                  <option value="Mark Zuckerberg">Mark Zuckerberg</option>
+                  <option value="Steve Jobs">Steve Jobs</option>
+                </select>
+                <label for="room">Ruangan</label>
+                <select name="room" id="room">
+                  <option value="Mawar 01">Mawar 01</option>
+                  <option value="Mawar 02">Mawar 02</option>
+                  <option value="Melati 01">Melati 01</option>
+                  <option value="Melati 02">Melati 02</option>
+                  <option value="Anggrek 01">Anggrek 01</option>
+                </select>
+                <button
+                  class="btn-kirim"
+                  type="submit"
+                  onclick="alert('Data Berhasil Ditambahkan!')"
+                >
+                  Simpan
+                </button>
+                <button
+                  class="btn-batal"
+                  type="button"
+                  onclick="medicalRecord()"
+                >
+                  Batal
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- End Bug Report -->
+    </section>
+
+    <!-- CONTENT -->
+    <script src="addMedicalRecord.js"></script>
+
+    <script>
+      const scriptURL =
+        "https://script.google.com/macros/s/AKfycbzt659eavh6gJLZrEuVYpA_hPJOgIbTKNB4tp4qHi-fPenslqSFsFmtn8neQM7-2HA/exec";
+      const form = document.forms["bug-report"];
+      const btnKirim = document.querySelector(".btn-kirim");
+      const alertElement = document.querySelector(".alert");
+
+      form.addEventListener("submit", (e) => {
+        e.preventDefault();
+        // ketika tombol submit di klik
+        fetch(scriptURL, { method: "POST", body: new FormData(form) })
+          .then((response) => {
+            // tampilkan alert
+            alertElement.classList.toggle("d-none");
+            console.log("Success!", response);
+            // reset form
+            form.reset();
+            // Menghilangkan alert setelah 3 detik (3000 milidetik)
+            setTimeout(function () {
+              alertElement.classList.toggle("d-none");
+            }, 3000);
+          })
+          .catch((error) => console.error("Error!", error.message));
+      });
+      alert.classList.toggle("d-none");
+    </script>
+  </body>
+</html>

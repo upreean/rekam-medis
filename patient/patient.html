@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Boxicons -->
+    <link
+      href="https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <!-- My CSS -->
+    <link rel="stylesheet" href="../style.css" />
+
+    <link rel="icon" href="../assets/img/healthcare.png" />
+
+    <title>REKAM MEDIS | Pasien</title>
+  </head>
+  <body>
+    <!-- SIDEBAR -->
+    <section id="sidebar">
+      <a href="#" class="brand">
+        <img src="../assets/img/healthcare.png" />
+        <span class="text">REKAM MEDIS</span>
+      </a>
+      <ul class="side-menu top">
+        <li class="">
+          <a href="#" onclick="dashboard()">
+            <i class="bx bxs-dashboard"></i>
+            <span class="text">Dashboard</span>
+          </a>
+        </li>
+        <li>
+          <a
+            href="#"
+            onclick="doctor()"
+            onmouseover="changeImagesDoctor()"
+            onmouseout="defaultImagesDoctor()"
+          >
+            <i class="bx"
+              ><img src="../assets/img/doctor.png" class="doctor-logo"
+            /></i>
+            <span class="text">Dokter</span>
+          </a>
+        </li>
+        <li class="active">
+          <a href="#" onclick="patient()">
+            <i class="bx">
+              <img src="../assets/img/patient-blue.png" class="patient-logo" />
+            </i>
+            <span class="text">Pasien</span>
+          </a>
+        </li>
+        <li>
+          <a
+            href="#"
+            onclick="patientRoom()"
+            onmouseover="changeImagesPatientRoom()"
+            onmouseout="defaultImagesPatientRoom()"
+          >
+            <i class="bx">
+              <img src="../assets/img/room.png" class="patient-room-logo" />
+            </i>
+            <span class="text">Ruangan</span>
+          </a>
+        </li>
+        <li>
+          <a
+            href="#"
+            onclick="medicine()"
+            onmouseover="changeImagesMedicine()"
+            onmouseout="defaultImagesMedicine()"
+          >
+            <i class="bx">
+              <img src="../assets/img/medicines.png" class="medicine-logo" />
+            </i>
+            <span class="text">Farmasi</span>
+          </a>
+        </li>
+        <li>
+          <a
+            href="#"
+            onclick="medicalRecord()"
+            onmouseover="changeImagesMedicalRecord()"
+            onmouseout="defaultImagesMedicalRecord()"
+          >
+            <i class="bx">
+              <img
+                src="../assets/img/medical-records.png"
+                class="medical-record-logo"
+              />
+            </i>
+            <span class="text">Rekam Medis</span>
+          </a>
+        </li>
+      </ul>
+      <ul class="side-menu">
+        <li>
+          <a href="#" onclick="setting()">
+            <i class="bx bxs-cog"></i>
+            <span class="text">Settings</span>
+          </a>
+        </li>
+        <li>
+          <a href="#" class="logout" onclick="logout()">
+            <i class="bx bxs-log-out-circle"></i>
+            <span class="text">Logout</span>
+          </a>
+        </li>
+      </ul>
+    </section>
+    <!-- SIDEBAR -->
+
+    <!-- CONTENT -->
+    <section id="content">
+      <!-- NAVBAR -->
+      <nav>
+        <i class="bx bx-menu"></i>
+        <a href="#" class="nav-link"></a>
+        <a href="#" class="profile">
+          <img src="../assets/img/user.png" />
+        </a>
+      </nav>
+      <!-- NAVBAR -->
+
+      <!-- User MANAGEMENT -->
+      <div class="patient" id="patient">
+        <div class="head-title">
+          <div class="left">
+            <h1>Pasien</h1>
+            <ul class="breadcrumb">
+              <li>
+                <a href="#">Dashboard</a>
+              </li>
+              <li><i class="bx bx-chevron-right"></i></li>
+              <li>
+                <a class="active" href="#">Pasien</a>
+              </li>
+            </ul>
+          </div>
+          <!-- <a href="#" class="btn-download">
+            <i class="bx bxs-cloud-download"></i>
+            <span class="text">Download PDF</span>
+          </a> -->
+        </div>
+
+        <ul class="box-info">
+          <li>
+            <i class="bx"
+              ><img src="../assets/img/patient-yellow.png" width="35px"
+            /></i>
+            <span class="text">
+              <h3>6</h3>
+              <p>Pasien</p>
+            </span>
+          </li>
+        </ul>
+
+        <div class="table-data">
+          <div class="order">
+            <div class="head">
+              <h3>Data Pasien</h3>
+              <input
+                type="search"
+                placeholder="Search..."
+                class="search-data"
+              />
+              <i class="bx bx-search"></i>
+              <a href="#" onclick="addPatient()">
+                <!-- <a href="#" class="btn-addDokter"> -->
+                <i class="bx bx-plus"></i>
+                <!-- <span class="text">Tambah Dokter</span> -->
+              </a>
+            </div>
+            <table>
+              <thead>
+                <tr>
+                  <th>No. BPJS</th>
+                  <th>Nama</th>
+                  <th>Alamat</th>
+                  <th>No. Hp</th>
+                  <th>Aksi</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>001230987654</td>
+                  <td>
+                    <p>Megawati</p>
+                  </td>
+                  <td>Jl.Sesama</td>
+                  <td>081234567890</td>
+                  <td>
+                    <a href="">
+                      <i class="bx bxs-edit"></i>
+                    </a>
+                    |
+                    <a href="">
+                      <i class="bx bxs-trash"></i>
+                    </a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>001234098765</td>
+                  <td>
+                    <p>Soekarno</p>
+                  </td>
+                  <td>Jl.Yuk</td>
+                  <td>081234509876</td>
+                  <td>
+                    <a href="">
+                      <i class="bx bxs-edit"></i>
+                    </a>
+                    |
+                    <a href="">
+                      <i class="bx bxs-trash"></i>
+                    </a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>001234650987</td>
+                  <td>
+                    <p>Prabowo Subianto</p>
+                  </td>
+                  <td>Jl.Menuju Kebahagiaan</td>
+                  <td>085432109876</td>
+                  <td>
+                    <a href="">
+                      <i class="bx bxs-edit"></i>
+                    </a>
+                    |
+                    <a href="">
+                      <i class="bx bxs-trash"></i>
+                    </a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>001234658709</td>
+                  <td>
+                    <p>Anies Baswedan</p>
+                  </td>
+                  <td>Jl.Yang Diridhoi Allah</td>
+                  <td>081023459876</td>
+                  <td>
+                    <a href="">
+                      <i class="bx bxs-edit"></i>
+                    </a>
+                    |
+                    <a href="">
+                      <i class="bx bxs-trash"></i>
+                    </a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>001234659087</td>
+                  <td>
+                    <p>Puan Maharani</p>
+                  </td>
+                  <td>Jl.Yang Sesat</td>
+                  <td>081023954678</td>
+                  <td>
+                    <a href="">
+                      <i class="bx bxs-edit"></i>
+                    </a>
+                    |
+                    <a href="">
+                      <i class="bx bxs-trash"></i>
+                    </a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>001234657980</td>
+                  <td>
+                    <p>Ganjar Pranowo</p>
+                  </td>
+                  <td>Jl.Buntu</td>
+                  <td>081678954320</td>
+                  <td>
+                    <a href="">
+                      <i class="bx bxs-edit"></i>
+                    </a>
+                    |
+                    <a href="">
+                      <i class="bx bxs-trash"></i>
+                    </a>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <!-- <div class="todo">
+            <div class="head">
+              <h3>Activity</h3>
+              <i class="bx bx-plus"></i>
+              <i class="bx bx-filter"></i>
+            </div>
+            <ul class="todo-list">
+              <li class="completed">
+                <p>lion bipsi menambah file</p>
+                <i class="bx bx-dots-vertical-rounded"></i>
+              </li>
+              <li class="not-completed">
+                <p>Penaldo menghapus file</p>
+                <i class="bx bx-dots-vertical-rounded"></i>
+              </li>
+              <li class="not-completed">
+                <p>Hariono Menghapus file</p>
+                <i class="bx bx-dots-vertical-rounded"></i>
+              </li>
+              <li class="completed">
+                <p>embappeh Menambah file</p>
+                <i class="bx bx-dots-vertical-rounded"></i>
+              </li>
+              <li class="not-completed">
+                <p>jack henhen grealish Menghapus file</p>
+                <i class="bx bx-dots-vertical-rounded"></i>
+              </li>
+            </ul>
+          </div> -->
+        </div>
+      </div>
+      <!-- end User management -->
+    </section>
+    <!-- CONTENT -->
+
+    <script src="patient.js"></script>
+  </body>
+</html>

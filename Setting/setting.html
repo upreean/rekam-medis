@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Boxicons -->
+    <link
+      href="https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <!-- My CSS -->
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="stylesheet" href="setting.css" />
+
+    <link rel="icon" href="../assets/img/healthcare.png" />
+
+    <title>E-File</title>
+  </head>
+  <body>
+    <!-- SIDEBAR -->
+    <section id="sidebar">
+      <a href="#" class="brand">
+        <img src="../assets/img/healthcare.png" />
+        <span class="text">REKAM MEDIS</span>
+      </a>
+      <ul class="side-menu top">
+        <li class="">
+          <a href="#" onclick="dashboard()">
+            <i class="bx bxs-dashboard"></i>
+            <span class="text">Dashboard</span>
+          </a>
+        </li>
+        <li>
+          <a
+            href="#"
+            onclick="doctor()"
+            onmouseover="changeImagesDoctor()"
+            onmouseout="defaultImagesDoctor()"
+          >
+            <i class="bx"
+              ><img src="../assets/img/doctor.png" class="doctor-logo"
+            /></i>
+            <span class="text">Dokter</span>
+          </a>
+        </li>
+        <li>
+          <a
+            href="#"
+            onclick="patient()"
+            onmouseover="changeImagesPatient()"
+            onmouseout="defaultImagesPatient()"
+          >
+            <i class="bx">
+              <img src="../assets/img/patient.png" class="patient-logo" />
+            </i>
+            <span class="text">Pasien</span>
+          </a>
+        </li>
+        <li>
+          <a
+            href="#"
+            onclick="patientRoom()"
+            onmouseover="changeImagesPatientRoom()"
+            onmouseout="defaultImagesPatientRoom()"
+          >
+            <i class="bx">
+              <img src="../assets/img/room.png" class="patient-room-logo" />
+            </i>
+            <span class="text">Ruangan</span>
+          </a>
+        </li>
+        <li>
+          <a
+            href="#"
+            onclick="medicine()"
+            onmouseover="changeImagesMedicine()"
+            onmouseout="defaultImagesMedicine()"
+          >
+            <i class="bx">
+              <img src="../assets/img/medicines.png" class="medicine-logo" />
+            </i>
+            <span class="text">Farmasi</span>
+          </a>
+        </li>
+        <li>
+          <a
+            href="#"
+            onclick="medicalRecord()"
+            onmouseover="changeImagesMedicalRecord()"
+            onmouseout="defaultImagesMedicalRecord()"
+          >
+            <i class="bx">
+              <img
+                src="../assets/img/medical-records.png"
+                class="medical-record-logo"
+              />
+            </i>
+            <span class="text">Rekam Medis</span>
+          </a>
+        </li>
+      </ul>
+      <ul class="side-menu">
+        <li class="active">
+          <a href="#" onclick="setting()">
+            <i class="bx bxs-cog"></i>
+            <span class="text">Settings</span>
+          </a>
+        </li>
+        <li>
+          <a href="#" class="logout" onclick="logout()">
+            <i class="bx bxs-log-out-circle"></i>
+            <span class="text">Logout</span>
+          </a>
+        </li>
+      </ul>
+    </section>
+    <!-- SIDEBAR -->
+
+    <!-- CONTENT -->
+    <section id="content">
+      <!-- NAVBAR -->
+      <nav>
+        <i class="bx bx-menu"></i>
+        <a href="#" class="nav-link"></a>
+        <a href="#" class="profile">
+          <img src="../assets/img/user.png" />
+        </a>
+      </nav>
+      <!-- NAVBAR -->
+
+      <div class="medical-record" id="medical-record">
+        <div class="head-title">
+          <div class="left">
+            <h1>Setting</h1>
+            <ul class="breadcrumb">
+              <li>
+                <a href="#">Dashboard</a>
+              </li>
+              <li><i class="bx bx-chevron-right"></i></li>
+              <li>
+                <a class="active" href="#">Settings</a>
+              </li>
+            </ul>
+          </div>
+          <a href="#" class="btn-download">
+            <i class="bx bxs-cloud-download"></i>
+            <span class="text">Download PDF</span>
+          </a>
+        </div>
+        <!--
+        <section class="content">
+          <div class="row">
+            <div class="col-xs-12">
+              <div
+                class="box"
+                style="
+                  padding-bottom: 30px;
+                  padding-left: 10px;
+                  height: max-content;
+                "
+              >
+                <div class="box-header">
+                  <h3 class="box-title">Profil 1217050018</h3>
+                </div>
+                <span class="foto_profil"
+                  ><img
+                    src="../assets/img/user.png"
+                    class="img-thumbnail"
+                    style="width: 150px"
+                /></span>
+                <div class="box-body table-responsive no-padding">
+                  <table class="table table-hover">
+                    <tbody>
+                      <tr>
+                        <th class="col-md-2">Username</th>
+                        <td>1217050018</td>
+                      </tr>
+                      <tr>
+                        <th>First Name</th>
+                        <td>APRIAN NUR ROHMAN</td>
+                      </tr>
+                      <tr>
+                        <th>Last Name</th>
+                        <td></td>
+                      </tr>
+                      <tr>
+                        <th>Email</th>
+                        <td></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <p></p>
+                <button
+                  href="https://salam.uinsgd.ac.id/dashboard/index.php/profil/edit"
+                  class="btn btn-primary"
+                >
+                  Ubah Profil
+                </button>
+                <button
+                  href="https://salam.uinsgd.ac.id/dashboard/index.php/profil/change-password"
+                  class="btn btn-primary"
+                >
+                  Ubah Password
+                </button>
+                <p></p>
+              </div>
+            </div>
+          </div>
+        </section>-->
+        <div class="card">
+          <div class="card-body">
+            <div class="profile-image">
+              <img
+                src="https://salam.uinsgd.ac.id/assets/img/your-profile-image.jpg"
+                alt="Aprian Nur Rohman"
+                class="img-thumbnail"
+                style="width: 150px; object-fit: cover"
+              />
+            </div>
+            <div class="profile-info">
+              <h3 class="card-title">Profil 1217050018</h3>
+              <ul class="list-unstyled">
+                <li><strong>Username:</strong> 1217050018</li>
+                <li><strong>First Name:</strong> Aprian Nur Rohman</li>
+                <li><strong>Last Name:</strong> -</li>
+                <li><strong>Email:</strong> -</li>
+              </ul>
+            </div>
+            <div class="card-footer">
+              <a
+                href="https://salam.uinsgd.ac.id/dashboard/index.php/profil/edit"
+                class="btn btn-primary"
+                >Ubah Profil</a
+              >
+              <a
+                href="https://salam.uinsgd.ac.id/dashboard/index.php/profil/change-password"
+                class="btn btn-info"
+                >Ubah Password</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- End Setting -->
+    </section>
+    <!-- CONTENT -->
+
+    <script src="setting.js"></script>
+  </body>
+</html>

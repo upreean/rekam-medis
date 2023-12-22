@@ -1,0 +1,114 @@
+a {
+  text-decoration: none;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-image: url("../img/login-bg3.jpg");
+  background-size: cover;
+  /* background-color: #bffdff; */
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+.logo {
+  color: #3c91e6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 50px;
+  padding: 5px;
+  text-align: center;
+  font-size: 24px; /* Atur ukuran font sesuai kebutuhan Anda */
+  margin-bottom: 20px; /* Atur margin di bawah logo sesuai kebutuhan Anda */
+  font-family: "Lato", sans-serif;
+}
+
+.logo .logo-img {
+  height: 50px;
+  margin-right: 10px;
+  margin-top: 3px;
+}
+
+.contain {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  width: 800px;
+  height: max-content;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.88);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 16px;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.form {
+  margin-bottom: 20px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.register-link {
+  margin-bottom: 10px;
+}
+
+.register-link span {
+  color: #000000;
+}
+
+input[type="email"],
+input[type="password"],
+input[type="text"],
+input[type="tel"],
+textarea {
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  font-size: 14px;
+}
+
+button[type="submit"] {
+  padding: 10px;
+  margin-top: 10px;
+  background-color: #3c91e6;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.4s;
+}
+
+button[type="submit"]:hover {
+  background-color: #2e8b57;
+}
+
+p.success-message {
+  color: #4caf50;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+p.error-message {
+  color: #f44336;
+  font-weight: bold;
+  margin-top: 10px;
+}

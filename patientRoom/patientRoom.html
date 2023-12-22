@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Boxicons -->
+    <link
+      href="https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <!-- My CSS -->
+    <link rel="stylesheet" href="../style.css" />
+
+    <link rel="icon" href="../assets/img/healthcare.png" />
+
+    <title>REKAM MEDIS | Ruang Inap</title>
+  </head>
+  <body>
+    <!-- SIDEBAR -->
+    <section id="sidebar">
+      <a href="#" class="brand">
+        <img src="../assets/img/healthcare.png" />
+        <span class="text">REKAM MEDIS</span>
+      </a>
+      <ul class="side-menu top">
+        <li class="">
+          <a href="#" onclick="dashboard()">
+            <i class="bx bxs-dashboard"></i>
+            <span class="text">Dashboard</span>
+          </a>
+        </li>
+        <li>
+          <a
+            href="#"
+            onclick="doctor()"
+            onmouseover="changeImagesDoctor()"
+            onmouseout="defaultImagesDoctor()"
+          >
+            <i class="bx"
+              ><img src="../assets/img/doctor.png" class="doctor-logo"
+            /></i>
+            <span class="text">Dokter</span>
+          </a>
+        </li>
+        <li>
+          <a
+            href="#"
+            onclick="patient()"
+            onmouseover="changeImagesPatient()"
+            onmouseout="defaultImagesPatient()"
+          >
+            <i class="bx">
+              <img src="../assets/img/patient.png" class="patient-logo" />
+            </i>
+            <span class="text">Pasien</span>
+          </a>
+        </li>
+        <li class="active">
+          <a href="#" onclick="patientRoom()">
+            <i class="bx">
+              <img
+                src="../assets/img/room-blue.png"
+                class="patient-room-logo"
+              />
+            </i>
+            <span class="text">Ruangan</span>
+          </a>
+        </li>
+        <li>
+          <a
+            href="#"
+            onclick="medicine()"
+            onmouseover="changeImagesMedicine()"
+            onmouseout="defaultImagesMedicine()"
+          >
+            <i class="bx">
+              <img src="../assets/img/medicines.png" class="medicine-logo" />
+            </i>
+            <span class="text">Farmasi</span>
+          </a>
+        </li>
+        <li>
+          <a
+            href="#"
+            onclick="medicalRecord()"
+            onmouseover="changeImagesMedicalRecord()"
+            onmouseout="defaultImagesMedicalRecord()"
+          >
+            <i class="bx">
+              <img
+                src="../assets/img/medical-records.png"
+                class="medical-record-logo"
+              />
+            </i>
+            <span class="text">Rekam Medis</span>
+          </a>
+        </li>
+      </ul>
+      <ul class="side-menu">
+        <li>
+          <a href="#" onclick="setting()">
+            <i class="bx bxs-cog"></i>
+            <span class="text">Settings</span>
+          </a>
+        </li>
+        <li>
+          <a href="#" class="logout" onclick="logout()">
+            <i class="bx bxs-log-out-circle"></i>
+            <span class="text">Logout</span>
+          </a>
+        </li>
+      </ul>
+    </section>
+    <!-- SIDEBAR -->
+
+    <!-- CONTENT -->
+    <section id="content">
+      <!-- NAVBAR -->
+      <nav>
+        <i class="bx bx-menu"></i>
+        <a href="#" class="nav-link"></a>
+        <a href="#" class="profile">
+          <img src="../assets/img/user.png" />
+        </a>
+      </nav>
+      <!-- NAVBAR -->
+
+      <!-- Patien Room -->
+      <div class="patient-room" id="patient-room">
+        <div class="head-title">
+          <div class="left">
+            <h1>Ruangan</h1>
+            <ul class="breadcrumb">
+              <li>
+                <a href="#">Dashboard</a>
+              </li>
+              <li><i class="bx bx-chevron-right"></i></li>
+              <li>
+                <a class="active" href="#">Ruangan</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <ul class="box-info">
+          <li>
+            <i class="bx"
+              ><img src="../assets/img/room-orange.png" width="30px"
+            /></i>
+            <span class="text">
+              <h3>5</h3>
+              <p>Ruangan</p>
+            </span>
+          </li>
+        </ul>
+
+        <div class="table-data">
+          <div class="order">
+            <div class="head">
+              <h3>Data Ruangan</h3>
+              <input
+                type="search"
+                placeholder="Search..."
+                class="search-data"
+              />
+              <i class="bx bx-search"></i>
+              <a href="#" onclick="addPatientRoom()">
+                <i class="bx bx-plus"></i>
+              </a>
+            </div>
+            <table>
+              <thead>
+                <tr>
+                  <th>No.</th>
+                  <th>Nama Ruangan</th>
+                  <th>Keterangan</th>
+                  <th>Aksi</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1</td>
+                  <td>
+                    <p>Mawar 01</p>
+                  </td>
+                  <td>Lantai 1</td>
+                  <td>
+                    <a href="">
+                      <i class="bx bxs-edit"></i>
+                    </a>
+                    |
+                    <a href="">
+                      <i class="bx bxs-trash"></i>
+                    </a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>2</td>
+                  <td>Mawar 02</td>
+                  <td>
+                    <p>Lantai 1</p>
+                  </td>
+                  <td>
+                    <a href="">
+                      <i class="bx bxs-edit"></i>
+                    </a>
+                    |
+                    <a href="">
+                      <i class="bx bxs-trash"></i>
+                    </a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>3</td>
+                  <td>
+                    <p>Melati 01</p>
+                  </td>
+                  <td>Lantai 2</td>
+                  <td>
+                    <a href="">
+                      <i class="bx bxs-edit"></i>
+                    </a>
+                    |
+                    <a href="">
+                      <i class="bx bxs-trash"></i>
+                    </a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>4</td>
+                  <td>Melati 02</td>
+                  <td>Lantai 2</td>
+                  <td>
+                    <a href="">
+                      <i class="bx bxs-edit"></i>
+                    </a>
+                    |
+                    <a href="">
+                      <i class="bx bxs-trash"></i>
+                    </a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>5</td>
+                  <td>Anggrek 01</td>
+                  <td>Lantai 3</td>
+                  <td>
+                    <a href="">
+                      <i class="bx bxs-edit"></i>
+                    </a>
+                    |
+                    <a href="">
+                      <i class="bx bxs-trash"></i>
+                    </a>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+      <!-- Patien Room -->
+    </section>
+    <!-- CONTENT -->
+
+    <script src="patientRoom.js"></script>
+  </body>
+</html>
